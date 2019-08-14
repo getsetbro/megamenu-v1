@@ -65,25 +65,12 @@ li.navitem:hover > a {
   flex-grow: 1;
 }
 .megamenu-columns {
-  /* column-count: 2; */
+  column-count: 4;
   column-width: 185px;
+  /* column-count is the maximum number of columns and column-width is the minimum width for those columns. */
+
   /* column-gap: 10px; */
 }
-/* @media (min-width: 768px) {
-  .megamenu-columns {
-    column-count: 3;
-  }
-}
-@media (min-width: 992px) {
-  .megamenu-columns {
-    column-count: 4;
-  }
-}
-@media (min-width: 1200px) {
-  .megamenu-columns {
-    column-count: 4;
-  }
-} */
 .megamenu-items-a {
   color: #000000;
   font-size: 16px;
