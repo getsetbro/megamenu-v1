@@ -15,22 +15,7 @@ var megamenu = {
     { text: "Safety & Quality 12", url: "#sq12" },
     { text: "Safety & Quality 13", url: "#sq13" },
     { text: "Safety & Quality 14", url: "#sq14" },
-    { text: "Safety & Quality 15", url: "#sq15" },
-    { text: "Safety & Quality 16", url: "#sq16" },
-    { text: "Safety & Quality 17", url: "#sq17" },
-    { text: "Safety & Quality 18", url: "#sq18" },
-    { text: "Safety & Quality 19", url: "#sq19" },
-    { text: "Safety & Quality 20", url: "#sq20" },
-    { text: "Safety & Quality 21", url: "#sq21" },
-    { text: "Safety & Quality 22", url: "#sq22" },
-    { text: "Safety & Quality 23", url: "#sq23" },
-    { text: "Safety & Quality 24", url: "#sq24" },
-    { text: "Safety & Quality 25", url: "#sq25" },
-    { text: "Safety & Quality 26", url: "#sq26" },
-    { text: "Safety & Quality 27", url: "#sq27" },
-    { text: "Safety & Quality 28", url: "#sq28" },
-    { text: "Safety & Quality 29", url: "#sq29" },
-    { text: "Safety & Quality 30", url: "#sq30" }
+    { text: "Safety & Quality 15", url: "#sq15" }
   ],
   "Patient Experience": [
     { text: "Patient Experience 01", url: "#pe01" },
@@ -61,8 +46,7 @@ var megamenu = {
     { text: "Patient Experience 26", url: "#pe26" },
     { text: "Patient Experience 27", url: "#pe27" },
     { text: "Patient Experience 28", url: "#pe28" },
-    { text: "Patient Experience 29", url: "#pe29" },
-    { text: "Patient Experience 30", url: "#pe30" }
+    { text: "Patient Experience 29", url: "#pe29" }
   ],
   "Coordinated Care": [
     { text: "Coordinated Care 01", url: "#cc01" },
@@ -94,7 +78,8 @@ var megamenu = {
     { text: "Coordinated Care 27", url: "#cc27" },
     { text: "Coordinated Care 28", url: "#cc28" },
     { text: "Coordinated Care 29", url: "#cc29" },
-    { text: "Coordinated Care 30", url: "#cc30" }
+    { text: "Coordinated Care 30", url: "#cc30" },
+    { text: "Coordinated Care 31", url: "#cc31" }
   ],
   "Enterprise Population Health": [
     { text: "Enterprise Population Health 01", url: "#eph01" },
@@ -145,20 +130,7 @@ var megamenu = {
     { text: "Category6 14", url: "#c614" },
     { text: "Category6 15", url: "#c615" },
     { text: "Category6 16", url: "#c616" },
-    { text: "Category6 17", url: "#c617" },
-    { text: "Category6 18", url: "#c618" },
-    { text: "Category6 19", url: "#c619" },
-    { text: "Category6 20", url: "#c620" },
-    { text: "Category6 21", url: "#c621" },
-    { text: "Category6 22", url: "#c622" },
-    { text: "Category6 23", url: "#c623" },
-    { text: "Category6 24", url: "#c624" },
-    { text: "Category6 25", url: "#c625" },
-    { text: "Category6 26", url: "#c626" },
-    { text: "Category6 27", url: "#c627" },
-    { text: "Category6 28", url: "#c628" },
-    { text: "Category6 29", url: "#c629" },
-    { text: "Category6 30", url: "#c630" }
+    { text: "Category6 17", url: "#c617" }
   ],
   "Category 7": [
     { text: "Category Seven 01", url: "#c701" },
@@ -167,30 +139,7 @@ var megamenu = {
     { text: "Category Seven 04", url: "#c704" },
     { text: "Category Seven 05", url: "#c705" },
     { text: "Category Seven 06", url: "#c706" },
-    { text: "Category Seven 07", url: "#c707" },
-    { text: "Category Seven 08", url: "#c708" },
-    { text: "Category Seven 09", url: "#c709" },
-    { text: "Category Seven 10", url: "#c710" },
-    { text: "Category Seven 11", url: "#c711" },
-    { text: "Category Seven 12", url: "#c712" },
-    { text: "Category Seven 13", url: "#c713" },
-    { text: "Category Seven 14", url: "#c714" },
-    { text: "Category Seven 15", url: "#c715" },
-    { text: "Category Seven 16", url: "#c716" },
-    { text: "Category Seven 17", url: "#c717" },
-    { text: "Category Seven 18", url: "#c718" },
-    { text: "Category Seven 19", url: "#c719" },
-    { text: "Category Seven 20", url: "#c720" },
-    { text: "Category Seven 21", url: "#c721" },
-    { text: "Category Seven 22", url: "#c722" },
-    { text: "Category Seven 23", url: "#c723" },
-    { text: "Category Seven 24", url: "#c724" },
-    { text: "Category Seven 25", url: "#c725" },
-    { text: "Category Seven 26", url: "#c726" },
-    { text: "Category Seven 27", url: "#c727" },
-    { text: "Category Seven 28", url: "#c728" },
-    { text: "Category Seven 29", url: "#c729" },
-    { text: "Category Seven 30", url: "#c730" }
+    { text: "Category Seven 07", url: "#c707" }
   ]
 };
 
