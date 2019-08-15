@@ -1,5 +1,29 @@
 var megamenu = {
-  Overall: [{ text: "Not sure what links go here", url: "#o01" }],
+  Overall: [
+    { text: "Overall 01", url: "#oa01" },
+    { text: "Overall 02", url: "#oa02" },
+    { text: "Overall 03", url: "#oa03" },
+    { text: "Overall 04", url: "#oa04" },
+    { text: "Overall 05", url: "#oa05" },
+    { text: "Overall 06", url: "#oa06" },
+    { text: "Overall 07", url: "#oa07" },
+    { text: "Overall 08", url: "#oa08" },
+    { text: "Overall 09", url: "#oa09" },
+    { text: "Overall 10", url: "#oa10" },
+    { text: "Overall 11", url: "#oa11" },
+    { text: "Overall 12", url: "#oa12" },
+    { text: "Overall 13", url: "#oa13" },
+    { text: "Overall 14", url: "#oa14" },
+    { text: "Overall 15", url: "#oa15" },
+    { text: "Overall 16", url: "#oa16" },
+    { text: "Overall 17", url: "#oa17" },
+    { text: "Overall 18", url: "#oa18" },
+    { text: "Overall 19", url: "#oa19" },
+    { text: "Overall 20", url: "#oa20" },
+    { text: "Overall 21", url: "#oa21" },
+    { text: "Overall 22", url: "#oa22" },
+    { text: "Overall 23", url: "#oa23" }
+  ],
   "Safety & Quality": [
     { text: "Safety & Quality 01", url: "#sq01" },
     { text: "Safety & Quality 02", url: "#sq02" },
@@ -140,45 +164,102 @@ var megamenu = {
     { text: "Category Seven 05", url: "#c705" },
     { text: "Category Seven 06", url: "#c706" },
     { text: "Category Seven 07", url: "#c707" }
+  ],
+  "Category 8": [
+    { text: "Category Eight 01", url: "#c801" },
+    { text: "Category Eight 02", url: "#c802" },
+    { text: "Category Eight 03", url: "#c803" },
+    { text: "Category Eight 04", url: "#c804" },
+    { text: "Category Eight 05", url: "#c805" },
+    { text: "Category Eight 06", url: "#c806" },
+    { text: "Category Eight 07", url: "#c807" }
+  ],
+  "Category 9": [
+    { text: "Category Nine 01", url: "#c901" },
+    { text: "Category Nine 02", url: "#c902" },
+    { text: "Category Nine 03", url: "#c903" },
+    { text: "Category Nine 04", url: "#c904" },
+    { text: "Category Nine 05", url: "#c905" },
+    { text: "Category Nine 06", url: "#c906" },
+    { text: "Category Nine 07", url: "#c907" }
   ]
 };
 
-// var megamenu_entries = Object.entries(megamenu);
-// var megamenu_categories = megamenu_categories.map(function(o){})
+function do_megamenu(global, document) {
+  var el_mm_cats = document.getElementsByClassName("megamenu-categories")[0];
+  var el_mm_items = document.getElementsByClassName("megamenu-items")[0];
+  var megamenu_timeout;
+  var megamenu_entries = Object.entries(megamenu);
+  var swap_name;
 
-var el_mm_categories = document.getElementsByClassName(
-  "megamenu-categories"
-)[0];
+  var viewall = document.createElement("A"); // Create a <a> element
+  viewall.innerText = "View All"; // Insert text
+  viewall.className = "megamenu-items-a";
+  viewall.setAttribute("href", "/view_all.aspx");
 
-var megamenu_keys = Object.keys(megamenu);
-megamenu_keys.forEach(function(txt) {
-  var my_div = document.createElement("DIV"); // Create a <div> element
-  my_div.innerText = txt; // Insert text
-  my_div.className = "megamenu-category";
-  my_div.addEventListener("mouseover", mouseOver, false);
-  my_div.addEventListener("mouseout", mouseOut, false);
-  el_mm_categories.appendChild(my_div);
-});
-var megamenu_timeout;
-var el_mm_columns = document.getElementsByClassName("megamenu-columns")[0];
-function mouseOver(e) {
-  //do something
-  var name = e.target.innerText;
+  var new_div_cat = function(name) {
+    var el_d = document.createElement("DIV"); // Create a <div> element
+    el_d.addEventListener("mouseover", mm_mouseOver, false);
+    el_d.addEventListener("mouseout", mm_mouseOut, false);
+    el_d.className = "megamenu-category";
+    el_d.innerText = name; // Insert text
+    return el_d;
+  };
 
-  clearTimeout(megamenu_timeout);
-  megamenu_timeout = setTimeout(function() {
-    el_mm_columns.innerHTML = "";
-    megamenu[name].forEach(function(o) {
-      var my_a = document.createElement("A"); // Create a <a> element
-      my_a.innerText = o.text; // Insert text
-      my_a.className = "megamenu-items-a";
-      my_a.setAttribute("href", o.url);
-      el_mm_columns.appendChild(my_a);
+  var new_a_link = function(o) {
+    var el_a = document.createElement("A"); // Create a <a> element
+    el_a.className = "megamenu-items-a";
+    el_a.setAttribute("href", o.url);
+    el_a.innerText = o.text; // Insert text
+    return el_a;
+  };
+
+  megamenu_entries.forEach(function(kvp) {
+    var name = kvp[0];
+    var links = kvp[1];
+
+    megamenu[name].div_cols = document.createElement("DIV"); // Create a <div> element
+    megamenu[name].div_cols.className = "megamenu-columns";
+
+    el_mm_cats.appendChild(new_div_cat(name));
+
+    links.forEach(function(link) {
+      //add links
+      megamenu[name].div_cols.appendChild(new_a_link(link));
     });
-  }, 333);
-}
 
-function mouseOut(e) {
-  //console.log(e);
-  clearTimeout(megamenu_timeout);
+    megamenu[name].div_cols.appendChild(viewall.cloneNode(true)); // append viewall
+  });
+
+  function mm_mouseOver(e) {
+    clearTimeout(megamenu_timeout);
+    swap_name = e.target.innerText;
+    megamenu_timeout = setTimeout(function() {
+      var elems = document.querySelectorAll(".megamenu-category.active");
+      [].forEach.call(elems, function(el) {
+        el.classList.remove("active");
+      });
+      e.target.classList.add("active");
+      el_mm_items.innerHTML = ""; //clear items
+      el_mm_items.appendChild(megamenu[swap_name].div_cols); //add items
+    }, 333);
+  }
+
+  function mm_mouseOut(e) {
+    clearTimeout(megamenu_timeout);
+  }
+
+  var ni_replib = document.querySelectorAll(".navitem.report-library")[0];
+  ni_replib.addEventListener("mouseenter", function(e) {
+    setTimeout(function() {
+      ni_replib.classList.add("active");
+    }, 333);
+  });
+
+  ni_replib.addEventListener("mouseleave", function(e) {
+    ni_replib.classList.remove("active");
+  });
+}
+if (megamenu) {
+  do_megamenu(window, document);
 }

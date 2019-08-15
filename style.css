@@ -37,14 +37,43 @@ li.navitem:hover > a {
   background-color: #7e81be;
   padding: 5px 0;
 }
-.navitem:hover .navitem-megamenu {
+.navitem-megamenu,
+.navitem-megamenu * {
+  box-sizing: border-box;
+}
+.navitem.active .navitem-megamenu {
   display: block;
 }
 .navitem-megamenu-container {
   display: flex;
 }
+
+.megamenu-categories,
+.megamenu-items {
+  height: calc(100vh - 186px);
+}
 .megamenu-categories {
-  padding: 5px 0 15px 0;
+  padding-top: 5px;
+  overflow: hidden;
+  overflow-y: auto;
+  flex-shrink: 0;
+  background: linear-gradient(#7e81be 30%, rgba(126, 129, 190, 0)),
+    linear-gradient(rgba(126, 129, 190, 0), #7e81be 70%) 0 100%,
+    radial-gradient(
+      farthest-side at 50% 0,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0)
+    ),
+    radial-gradient(
+        farthest-side at 50% 100%,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0)
+      )
+      0 100%;
+  background-color: #7e81be;
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
 }
 .megamenu-category {
   color: white;
@@ -53,16 +82,41 @@ li.navitem:hover > a {
   line-height: 44px;
   padding: 0 2rem;
   white-space: nowrap;
+  cursor: default;
 }
-.megamenu-category:hover {
+/* .megamenu-category:hover, */
+.megamenu-category.active {
   background-color: #e5e6f1;
   color: #7e81be;
 }
+
 .megamenu-items {
-  background-color: #e5e6f1;
   /* width: calc(100% - 285px); */
-  padding: 8px 1rem;
+  padding: 5px 1rem;
   flex-grow: 1;
+  overflow: hidden;
+  overflow-y: auto;
+  background: /* Shadow covers */ linear-gradient(
+      #e5e6f1 30%,
+      rgba(229, 230, 241, 0)
+    ),
+    linear-gradient(rgba(229, 230, 241, 0), #e5e6f1 70%) 0 100%,
+    /* Shadows */
+      radial-gradient(
+        farthest-side at 50% 0,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0)
+      ),
+    radial-gradient(
+        farthest-side at 50% 100%,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0)
+      )
+      0 100%;
+  background-color: #e5e6f1;
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
 }
 .megamenu-columns {
   column-count: 4;
@@ -74,9 +128,9 @@ li.navitem:hover > a {
 .megamenu-items-a {
   color: #000000;
   font-size: 16px;
-  line-height: 36px;
   text-decoration: none;
   display: block;
+  padding: 5px 0;
 }
 .megamenu-items-a:hover {
   color: #181f63;
