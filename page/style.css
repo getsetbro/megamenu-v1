@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font: 15px/1.5 "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.topr {
+  height: 111px;
+  padding: 1px 0 0;
+}
+
+.mm-page-columns {
+  column-count: 4;
+  column-width: 185px;
+  /* column-count is the maximum number of columns and column-width is the minimum width for those columns. */
+
+  /* column-gap: 10px; */
+}
+.mm-page-items-a {
+  display: block;
+}
