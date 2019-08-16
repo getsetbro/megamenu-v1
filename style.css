@@ -50,14 +50,18 @@ li.navitem:hover > a {
 
 .megamenu-categories,
 .megamenu-items {
-  height: calc(100vh - 186px);
+  max-height: calc(100vh - 186px);
+  min-height: 333px;
+  overflow: hidden;
+  overflow-y: auto;
+  /* background-repeat: no-repeat;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-attachment: local, local, scroll, scroll; */
 }
 .megamenu-categories {
   padding-top: 5px;
-  overflow: hidden;
-  overflow-y: auto;
   flex-shrink: 0;
-  background: linear-gradient(#7e81be 30%, rgba(126, 129, 190, 0)),
+  /* background: linear-gradient(#7e81be 30%, rgba(126, 129, 190, 0)),
     linear-gradient(rgba(126, 129, 190, 0), #7e81be 70%) 0 100%,
     radial-gradient(
       farthest-side at 50% 0,
@@ -69,11 +73,8 @@ li.navitem:hover > a {
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0)
       )
-      0 100%;
+      0 100%; */
   background-color: #7e81be;
-  background-repeat: no-repeat;
-  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
-  background-attachment: local, local, scroll, scroll;
 }
 .megamenu-category {
   color: white;
@@ -84,46 +85,32 @@ li.navitem:hover > a {
   white-space: nowrap;
   cursor: default;
 }
-/* .megamenu-category:hover, */
 .megamenu-category.active {
   background-color: #e5e6f1;
   color: #7e81be;
 }
-
 .megamenu-items {
-  /* width: calc(100% - 285px); */
   padding: 5px 1rem;
   flex-grow: 1;
-  overflow: hidden;
-  overflow-y: auto;
-  background: /* Shadow covers */ linear-gradient(
-      #e5e6f1 30%,
-      rgba(229, 230, 241, 0)
-    ),
+
+  /* background: linear-gradient(#e5e6f1 30%, rgba(229, 230, 241, 0)),
     linear-gradient(rgba(229, 230, 241, 0), #e5e6f1 70%) 0 100%,
-    /* Shadows */
-      radial-gradient(
-        farthest-side at 50% 0,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0)
-      ),
+    radial-gradient(
+      farthest-side at 50% 0,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0)
+    ),
     radial-gradient(
         farthest-side at 50% 100%,
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0)
       )
-      0 100%;
+      0 100%; */
   background-color: #e5e6f1;
-  background-repeat: no-repeat;
-  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
-  background-attachment: local, local, scroll, scroll;
 }
 .megamenu-columns {
   column-count: 4;
   column-width: 185px;
-  /* column-count is the maximum number of columns and column-width is the minimum width for those columns. */
-
-  /* column-gap: 10px; */
 }
 .megamenu-items-a {
   color: #000000;
