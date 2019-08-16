@@ -51,7 +51,7 @@ li.navitem:hover > a {
 .megamenu-categories,
 .megamenu-items {
   max-height: calc(100vh - 186px);
-  min-height: 333px;
+  min-height: 99px;
   overflow: hidden;
   overflow-y: auto;
   /* background-repeat: no-repeat;
