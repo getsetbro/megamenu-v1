@@ -184,12 +184,22 @@ var megamenu = {
     { text: "Category Nine 07", url: "#c907" }
   ]
 };
+if (!Object.entries) {
+  Object.entries = function(obj) {
+    var ownProps = Object.keys(obj),
+      i = ownProps.length,
+      resArray = new Array(i); // preallocate the Array
+    while (i--) resArray[i] = [ownProps[i], obj[ownProps[i]]];
 
+    return resArray;
+  };
+}
 function do_megamenu(global, document) {
   var el_mm_cats = document.getElementsByClassName("megamenu-categories")[0];
   var el_mm_items = document.getElementsByClassName("megamenu-items")[0];
-  var megamenu_timeout;
   var megamenu_entries = Object.entries(megamenu);
+  var megamenu_timeout;
+  var div_cols = {};
   var swap_name;
 
   var viewall = document.createElement("A"); // Create a <a> element
@@ -199,8 +209,8 @@ function do_megamenu(global, document) {
 
   var new_div_cat = function(name) {
     var el_d = document.createElement("DIV"); // Create a <div> element
-    el_d.addEventListener("mouseover", mm_mouseOver, false);
-    el_d.addEventListener("mouseout", mm_mouseOut, false);
+    el_d.addEventListener("mouseover", mm_mouseIn, false);
+    el_d.addEventListener("mouseout", mm_mouseExit, false);
     el_d.className = "megamenu-category";
     el_d.innerText = name; // Insert text
     return el_d;
@@ -218,20 +228,24 @@ function do_megamenu(global, document) {
     var name = kvp[0];
     var links = kvp[1];
 
-    megamenu[name].div_cols = document.createElement("DIV"); // Create a <div> element
-    megamenu[name].div_cols.className = "megamenu-columns";
+    div_cols[name] = {};
+    div_cols[name].div_col = document.createElement("DIV"); // Create a <div> element
+    div_cols[name].div_col.className = "megamenu-columns";
 
     el_mm_cats.appendChild(new_div_cat(name));
 
     links.forEach(function(link) {
       //add links
-      megamenu[name].div_cols.appendChild(new_a_link(link));
+      div_cols[name].div_col.appendChild(new_a_link(link));
     });
 
-    megamenu[name].div_cols.appendChild(viewall.cloneNode(true)); // append viewall
+    div_cols[name].div_col.appendChild(viewall.cloneNode(true)); // append viewall
   });
 
-  function mm_mouseOver(e) {
+  function mm_mouseIn(e) {
+    if (swap_name === e.target.innerText) {
+      return;
+    }
     clearTimeout(megamenu_timeout);
     swap_name = e.target.innerText;
     megamenu_timeout = setTimeout(function() {
@@ -240,12 +254,17 @@ function do_megamenu(global, document) {
         el.classList.remove("active");
       });
       e.target.classList.add("active");
-      el_mm_items.innerHTML = ""; //clear items
-      el_mm_items.appendChild(megamenu[swap_name].div_cols); //add items
+      el_mm_items.replaceChild(
+        div_cols[swap_name].div_col,
+        el_mm_items.firstChild
+      );
     }, 333);
   }
 
-  function mm_mouseOut(e) {
+  function mm_mouseExit(e) {
+    if (swap_name === e.target.innerText) {
+      return;
+    }
     clearTimeout(megamenu_timeout);
   }
 

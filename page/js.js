@@ -184,7 +184,16 @@ var megamenu = {
     { text: "Category Nine 07", url: "#c907" }
   ]
 };
+if (!Object.entries) {
+  Object.entries = function(obj) {
+    var ownProps = Object.keys(obj),
+      i = ownProps.length,
+      resArray = new Array(i); // preallocate the Array
+    while (i--) resArray[i] = [ownProps[i], obj[ownProps[i]]];
 
+    return resArray;
+  };
+}
 function do_menupage(global, document) {
   var el_mm_page = document.getElementsByClassName("menu-page")[0];
 
