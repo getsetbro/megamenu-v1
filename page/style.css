@@ -2,11 +2,17 @@ body {
   margin: 0;
   font: 15px/1.5 "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+body * {
+  box-sizing: border-box;
+}
 .topr {
   height: 111px;
   padding: 1px 0 0;
 }
 
+.reportlibrarypage {
+  padding: 1rem;
+}
 .mm-page-columns {
   column-count: 4;
   column-width: 185px;
@@ -16,4 +22,32 @@ body {
 }
 .mm-page-items-a {
   display: block;
+
+  color: #2d2de4;
+  font-family: "Open Sans";
+  font-size: 15px;
+  line-height: 30px;
+  text-decoration: none;
+}
+.mm-page-items-a:hover {
+  text-decoration: underline;
+}
+.reportlibrarypage-hdr {
+  color: #027aff;
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 27px;
+  margin-bottom: 2rem;
+}
+.mm-page-category {
+  color: #000000;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+
+  border-bottom: 1px solid #979797;
+  padding-bottom: 6px;
+  margin: 2rem 0 1rem;
 }

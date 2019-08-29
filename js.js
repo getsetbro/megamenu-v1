@@ -198,14 +198,16 @@ function do_megamenu(global, document) {
   var el_mm_cats = document.getElementsByClassName("megamenu-categories")[0];
   var el_mm_items = document.getElementsByClassName("megamenu-items")[0];
   var megamenu_entries = Object.entries(myData);
-  var megamenu_timeout;
+  var category_timeout;
+  var megamenu_timeout_in;
+  var megamenu_timeout_out;
   var div_cols = {};
   var swap_name;
 
-  var viewall = document.createElement("A"); // Create a <a> element
-  viewall.innerText = "View All"; // Insert text
-  viewall.className = "megamenu-items-a";
-  viewall.setAttribute("href", "/view_all.aspx");
+  // var viewall = document.createElement("A"); // Create a <a> element
+  // viewall.innerText = "View All"; // Insert text
+  // viewall.className = "megamenu-items-a";
+  // viewall.setAttribute("href", "/view_all.aspx");
 
   var new_div_cat = function(name) {
     var el_d = document.createElement("DIV"); // Create a <div> element
@@ -239,16 +241,16 @@ function do_megamenu(global, document) {
       div_cols[name].div_col.appendChild(new_a_link(link));
     });
 
-    div_cols[name].div_col.appendChild(viewall.cloneNode(true)); // append viewall
+    //div_cols[name].div_col.appendChild(viewall.cloneNode(true)); // append viewall
   });
 
   function mm_mouseIn(e) {
     if (swap_name === e.target.innerText) {
       return;
     }
-    clearTimeout(megamenu_timeout);
+    clearTimeout(category_timeout);
     swap_name = e.target.innerText;
-    megamenu_timeout = setTimeout(function() {
+    category_timeout = setTimeout(function() {
       var elems = document.querySelectorAll(".megamenu-category.active");
       [].forEach.call(elems, function(el) {
         el.classList.remove("active");
@@ -258,25 +260,28 @@ function do_megamenu(global, document) {
         div_cols[swap_name].div_col,
         el_mm_items.firstChild
       );
-    }, 333);
+    }, 444);
   }
 
   function mm_mouseExit(e) {
-    if (swap_name === e.target.innerText) {
-      return;
-    }
-    clearTimeout(megamenu_timeout);
+    // if (swap_name === e.target.innerText) {return;}
+    clearTimeout(category_timeout);
   }
 
   var ni_replib = document.querySelectorAll(".navitem.report-library")[0];
   ni_replib.addEventListener("mouseenter", function(e) {
-    setTimeout(function() {
+    clearTimeout(megamenu_timeout_out);
+
+    megamenu_timeout_in = setTimeout(function() {
       ni_replib.classList.add("active");
-    }, 333);
+    }, 444);
   });
 
   ni_replib.addEventListener("mouseleave", function(e) {
-    ni_replib.classList.remove("active");
+    clearTimeout(megamenu_timeout_in);
+    megamenu_timeout_out = setTimeout(function() {
+      ni_replib.classList.remove("active");
+    }, 555);
   });
 }
 if (myData) {
