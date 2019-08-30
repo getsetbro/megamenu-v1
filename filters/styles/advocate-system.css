@@ -1,0 +1,248 @@
+﻿body { background: #fff; }
+.ms-core-navigation a { color: #000 !important; }
+/* removes the left and right padding on all containers */
+.container, .row { padding-right: 0px; padding-left: 0px; margin-right: 0px; margin-left: 0px; }
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 { padding-right: 0px; padding-left: 0px; }
+.systemLeftNav { min-height: 550px }
+div#MainRow { margin-top: 15px; }
+/* centers the header above the top nav */
+.header { margin-top: 10px; width: 960px; margin: 0 auto; height: 140px; }
+/* hides the OOTB logo and head title */
+#DeltaSiteLogo, .headtitle { display: none }
+/* fixes the weird things going on in the ribbon */
+* { -webkit-box-sizing: inherit; -moz-box-sizing: border-box; box-sizing: content-box; }
+/* over ride bootstrap panel styles */
+.panel { border: 0; border-radius: 4px; -webkit-box-shadow: none; box-shadow: none; }
+/* hides the left navigation */
+.left-navbar { display: none; }
+/* centers the top navigation */
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form { border-color: transparent; max-width: 960px; margin: 0 0 0 -15px; }
+/* style the top navigation */
+#DeltaTopNavigation { position: relative; left: -15px; }
+.navbar-inverse { background-color: #696A6C; border-color: #696A6C; border-top: 10px solid #afb9ba; }
+.navbar-inverse .navbar-brand, .ms-core-listMenu-horizontalBox li.static > .ms-core-listMenu-item, .ms-navedit-editLinksText { color: #fff; }
+.navbar { border-radius: 0; }
+/* this hides the top suite bar but we'll move the suiteBarRight into the header */
+#suiteBar { display: none; }
+/* moving the user name and site settings into the header and hiding help */
+#suiteBarRight { background-color: transparent; position: absolute; top: 57px; }
+#welcomeMenuBox { font-size: 12px; }
+.ms-core-deltaSuiteBarRight { position: relative; left: 828px; }
+#ms-help { display: none; }
+.ms-welcome-hover, .ms-siteactions-hover { background-color: #fff; border-right-color: #fff; }
+/* styling the global search*/
+.input-group.pull-right { position: absolute; width: 960px; }
+.ms-mpSearchBox.ms-floatRight { position: relative; top: -41px; margin: 0 auto; float: none; left: 369px; }
+.ms-srch-sb > input { width: 160px; }
+.ms-srch-sb > .ms-srch-sb-searchLink { position: relative; left: -25px; }
+/* style header nav */
+.navbar { margin-bottom: 0; }
+.header-nav { float: left; position: relative; display: block; margin-top: 40px; }
+.header-nav-divider { display: inline-block; margin: 0 15px 0 0; color: #666 }
+.header-nav-divider.tall { height: 64px; margin-right: 19px; }
+.header-nav-item { display: inline-block; margin: 0 15px 0 0; font-size: 12px }
+.header-nav-item a, .header-nav-item a:visited { color: #666 }
+.header-nav-item a:hover { color: #444 }
+.header-nav-item.chis { color: #3e85c7; margin: 0 45px 0 0; font-size: 13px; font-weight: bold }
+.header-nav-item.advocatehome { color: #646464; }
+.header-nav-item.contacus { color: #646464; }
+.header-nav-item.faqs { color: #646464; }
+.advocate-logo.pull-left { margin-left: -15px; }
+#DeltaPageStatusBar { position: relative; z-index: 999; }
+#pageStatusBar[class], .ms-status-msg { margin-bottom: 15px; }
+/* center page area container size */
+#centerarea.container { max-width: 80%; margin: 0 auto; position: relative; z-index: 999; }
+/* footer styling */
+#s4-bodyContainer { padding-bottom: 0; }
+#footer { width: 100%; margin: 0 auto; background: #696A6C; height: 150px; min-height: 150px !important; padding: 0px; }
+.innercontainer { max-width: 990px; margin: 0 auto }
+.footercopy { color: #fff; font-size: 11px; padding-top: 37px; line-height: 200%; text-align: center; }
+
+/* Over riding iso-type tile styles */
+#filters, #measures { margin: 15px 0 30px 0; }
+#measures { float: left; }
+#filters { float: right; }
+
+#measures .button { display: inline-block; padding: 1em 2em; background: #8b9790; border: none; border-radius: .4em; background-image: none; text-shadow: none; color: #fff; font-weight: 500; cursor: pointer; }
+#filters .button { display: inline-block; padding: 1em 18px; background: #8b9790; border: none; border-radius: .4em; background-image: none; text-shadow: none; color: #fff; cursor: pointer; margin-right: 5px; }
+#siteBtns.btn-group { float: right; margin-right: 33px; }
+#siteBtns > button { display: inline-block; padding: 1em 0; background: #8b9790; border: none; border-radius: .4em; background-image: none; text-shadow: none; color: #fff; cursor: pointer; margin-right: 0; }
+#siteBtns > button.btn.btn-default.dropdown-toggle { border-radius: 0 .4em .4em 0 !important; min-width: 2em !important; border-left: 2px solid #fff; }
+#siteFilters > button:nth-child(2) { border-radius: .4em 0 0 .4em !important; }
+#siteFilters .dropdown-menu { left: -100px; }
+#filters > button.button.all { min-width: 2em !important; }
+#filters .button.on-target-bkgd { background: url('/_layouts/15/tilesframework/Images/target-bkgd-on.png') no-repeat 0 0 #8b9790 !important; }
+#filters .button.under-target-bkgd { background: url('/_layouts/15/tilesframework/Images/target-bkgd-under.png') no-repeat 0 0 #8b9790 !important; }
+#filters .button.off-target-bkgd { background: url('/_layouts/15/tilesframework/Images/target-bkgd-off.png') no-repeat 0 0 #8b9790 !important; }
+.button:hover { background-color: #8b9790; text-shadow: #8b9790; color: #11175e; }
+
+.button:active,
+.button.is-checked,
+.button.is-selected { background-color: #8b9790; border-color: #8b9790; }
+.button.is-checked, .button.is-selected { background-color: #8b9790; text-shadow: #8b9790; color: #11175e !important; font-weight: bold !important; }
+.button:active { box-shadow: #8b9790; }
+#measures.button-group .button.watchlist { border-radius: 0 .4em .4em 0; }
+#measures.button-group .button:first-child { border-radius: .4em 0 0 .4em; }
+.btn-group-label { float: left; margin: 12px 7px 0 25px; color: #696a6d; }
+.button-group .button:first-child0.4em 0 0 0.4em !important { border-radius: 0.5em 0 0 0.5em !important; }
+.element-item:hover { cursor: pointer; }
+.element-item { position: relative; float: left; width: 260px; height: 230px; margin: 0 30px 30px 0; padding: 20px; background: #888; color: #fff; border-top-left-radius: 10px; border-top-right-radius: 10px; }
+.demo .isotope, .demo.isotope { border: 0; background: none; }
+/* tile colors */
+.element-item.offtarget { background: #be001f; }
+.element-item.undertarget { background: #f1c40f; }
+.element-item.ontarget { background: #2ecc71; }
+.element-item .tilename { position: relative; color: #fff; top: 0; text-transform: none; letter-spacing: 0; font-size: 20px; font-weight: normal; text-align: center; height: 1px; padding: 0 8px; }
+.element-item .targetdiff { position: relative; left: 0; top: 49px; font-size: 57px; font-weight: bold; color: white; text-align: center; width: 100%; }
+.element-item .trend { position: absolute; bottom: 0; height: 100px; width: 50%; background-color: #aeb6b1; text-align: center; display: table; left: 50%; }
+.element-item .target { position: absolute; left: 0; bottom: 0; height: 100px; width: 50%; background-color: #8b9790; text-align: center; display: table; }
+.element-item .targetstats, .element-item .trendstats { vertical-align: middle; display: table-cell; }
+.element-item .targettitle, .element-item .trendtitle { text-transform: uppercase; font-size: 18px; }
+.element-item .targetnumber { font-weight: bold; font-size: 30px; padding: 7px 0 0 0; position: relative; top: 2px; }
+.element-item .targetbar.upup { background: url('/_layouts/15/tilesframework/Images/trend-up-up.png') no-repeat center 0; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.element-item .targetbar.updown { background: url('/_layouts/15/tilesframework/Images/trend-up-down.png') no-repeat center 0; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.element-item .targetbar.upflat { background: url('/_layouts/15/tilesframework/Images/trend-up-flat.png') no-repeat center 0; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.element-item .targetbar.downdown { background: url('/_layouts/15/tilesframework/Images/trend-down-down.png') no-repeat center 0; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.element-item .targetbar.downflat { background: url('/_layouts/15/tilesframework/Images/trend-down-flat.png') no-repeat center 0; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.element-item .targetbar.downup { background: url('/_layouts/15/tilesframework/Images/trend-down-up.png') no-repeat center 0; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.element-item .targetbar.flatflat { background: url('/_layouts/15/tilesframework/Images/trend-flat-flat.png') no-repeat center 0; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.element-item .targetbar.flatup { background: url('/_layouts/15/tilesframework/Images/trend-flat-up.png') no-repeat center 0; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.element-item .targetbar.flatdown { background: url('/_layouts/15/tilesframework/Images/trend-flat-down.png') no-repeat center 0; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.element-item .targetbar.na { background: url('/_layouts/15/tilesframework/Images/trend-na.png') no-repeat center 6px; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.element-item .targetbar img { width: 86px; height: 47px }
+span.uppercase { text-transform: uppercase; font-size: 22px; }
+h1 { font-size: 32px; color: #11175e; }
+
+
+
+/* sticky header */
+.masthead.fixed.container.ms-dialogHidden { position: fixed; width: 100%; top: 35px; background-color: #fff; z-index: 9999 }
+.masthead.fixed .header { height: 75px; }
+.masthead.fixed .header-nav { margin-top: 7px; }
+.masthead.fixed .advocate-logo.pull-left img { width: 245px; position: relative; top: 15px; padding-right: 10px; }
+.masthead.fixed .header-nav-divider.tall { height: 30px; margin-right: 5px; }
+.masthead.fixed .header-nav-item.chis { font-size: 12px; }
+.masthead.fixed #suiteBarRight { top: 24px; }
+#s4-bodyContainer.fixed .col-sm-12.col-lg-12 { margin-top: 170px; }
+.masthead.fixed .advocate-logo.pull-left { // overflow: hidden; }
+#s4-ribbonrow { z-index: 1000; }
+
+@media (min-width: 1200px) {
+  .container { max-width: 100%; }
+  /* end media query for 1200px */
+}
+
+@media (min-width: 768px) {
+  .container { max-width: 100%; }
+  /* end media query for 768px */
+}
+
+/* ipad landscape and wider */
+@media (min-width: 1024px) {
+  #siteMeasures.btn-group, #filters #siteFilters.btn-group { display: none !important }
+  /* end media query for 1024px */
+}
+
+/* ipad portrait and lower mobile devices */
+@media (max-width: 1023px) {
+  .advocate-logo.pull-left { margin-left: 0; }
+  #s4-workspace { overflow-x: hidden; }
+  #site > button:nth-child(1), #site > button:nth-child(1) { border-radius: .4em 0 0 .4em; }
+  #dashboardtitle { text-align: center }
+  #measures #site.btn-group, #filters #site.btn-group { display: inline-block }
+  #measures button.button, #filters button.button { display: none; }
+  #measures, #site { margin: 10px 0; }
+  #filters { margin: 10px 0 20px; }
+  .btn-group-label { display: none; }
+  #site.col-md-3 { width: 100%; text-align: center; }
+  #measures.col-md-5, #filters.col-md-7 { width: 100%; text-align: center; }
+  .btn-group-label { margin: 12px 7px 0 0; }
+  #site.btn-group { float: none; margin: 0 auto; }
+  #site .dropdown-menu { left: 0; }
+  .btn-group > .btn:first-child, #site > button { margin-left: 0; min-width: 10em; }
+  #s4-bodyContainer { padding: 0; }
+  .header-nav, #DeltaTopNavigation, .input-group { display: none }
+  .header { margin-top: 10px; width: 100%; margin: 0 auto; height: 140px; padding: 0 15px; }
+  .navbar-toggle { display: block; position: relative; float: right; padding: 9px 10px; margin-top: 8px; margin-right: 15px; margin-bottom: 8px; background-color: transparent; border: 1px solid transparent; border-radius: 4px; }
+  .navbar-brand { display: block; }
+  .navbar-header { float: none; }
+  .navbar > .container .navbar-brand { margin-left: 0; color: #fff }
+  .container > .navbar-header, .container > .navbar-collapse { margin-right: 0; margin-left: 0; }
+  /* pulls the top right suite bar to the right */
+  #suiteBarRight { display: table-cell; line-height: 0px; width: 96%; text-align: right; }
+  .ms-core-deltaSuiteBarRight { position: relative; left: 0; }
+  .footercopy { padding: 37px 15px 0; }
+  .isotope { margin: 0 auto; display: table; width: 660px; }
+  /* end media query for 1023px */
+}
+
+/* iPhone 6 Plus and lower mobile devices */
+@media (max-width: 767px) {
+  /* hides the eidt buttons for mobile devices */
+  #suiteBarRight { display: none }
+  /* end media query for 767px */
+}
+
+
+@media (max-width: 659px) {
+  .isotope { margin: 0 30px; display: table; width: 100%; }
+  /* end media query for 659px */
+}
+
+/* iPhone 5 and lower mobile devices */
+@media (max-width: 360px) {
+  /* eliminates the horizontal scroll */
+  .element-item { margin: 0 0 30px 0; }
+  .isotope { margin: 0; }
+  /* end media query for 360px */
+}
+
+
+
+/* Public Data */
+
+#dashboardtitle h2 { font-size: 24px; color: #666; margin: 5px 0; font-weight: normal; }
+
+#dashboardtitle div { font-size: 14px; color: #666; margin: 5px 0 30px; }
+
+.publicdata .element-item { position: relative; float: left; width: 220px; height: 220px; margin: 0 10px 10px 0; padding: 8px; color: #fff; border-top-left-radius: 10px; border-top-right-radius: 10px; }
+
+.publicdata > .element-item:nth-child(3), .publicdata > .element-item:nth-child(6), .publicdata > .element-item:nth-child(9), .publicdata > .element-item:nth-child(13), .publicdata > .element-item:nth-child(15),
+.publicdata > .element-item:nth-child(18), .publicdata > .element-item:nth-child(21), .publicdata > .element-item:nth-child(24), .publicdata > .element-item:nth-child(27), .publicdata > .element-item:nth-child(30) { margin: 0 0 10px 0; }
+
+.publicdata .element-item .tilename { position: relative; color: #fff; top: -8px; text-transform: none; letter-spacing: 0; font-size: 16px; font-weight: normal; text-align: center; height: 30px; padding: 10px 0 0 0; background-color: #8b9790; left: -8px; width: 236px; border-top-left-radius: 10px; border-top-right-radius: 10px; }
+
+.publicdata .element-item .keyopportunity { position: relative; left: 0; top: -5px; font-size: 22px; font-weight: bold; color: white; text-align: center; height: 100px; vertical-align: middle; display: table-cell; width: 220px; }
+
+.publicdata .element-item .estimateatrisk { position: absolute; left: 0; bottom: 0; font-size: 22px; font-weight: normal; color: #666; text-align: center; width: 236px; background-color: #ddd; height: 75px; padding-top: 10px; }
+
+.publicdata .element-item .uppercase { font-size: 14px; font-weight: normal; text-transform: uppercase; }
+
+a, a:visited, a:hover { color: #3e85c7; }
+
+.col-md-9 .ms-webpartzone-cell { padding-right: 10px; }
+
+.col-md-3 .ms-webpartzone-cell { padding-left: 10px; }
+
+.ms-webpart-titleText.ms-webpart-titleText, .ms-webpart-titleText > a, .ms-webpart-titleText > a:hover, .ms-webpart-titleText > a:visited { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 24px; color: #fff; font-weight: normal; }
+
+/* edit mode */
+table#MSOTlPn_Tbl { position: absolute; left: 815px; }
+input[type=button][disabled], input[type=reset][disabled], input[type=submit][disabled], button[disabled][disabled] { border-color: #e1e1e1; background-color: #fdfdfd; background-color: #fdfdfd; color: #b1b1b1; }
+
+.container { width: 100%; margin: 0 auto; background-color: transparent; color: inherit; border: 0; }
+
+/* Ensure the welcome menu is never obscured */
+#welcomeMenuBox, #DeltaSuiteBarRight { z-index: 999999; }
+
+form[action*="reportviewer.aspx"] #centerarea, form[action*="publicDataViewer.aspx"] #centerarea { max-width: 100%; margin-left: 2em; margin-right: 2em; }
+
+div#MainRow { margin-top: 150px; position: relative; }
+
+div#s4-ribbonrow { z-index: 1000000; }
+
+nav#navbar { margin-top: -16px; }
+
+.col-md-3 { max-width: 250px; }
+
+.ms-cui-menu, .ms-cui-img-cont-float { z-index: 10000 !important; }

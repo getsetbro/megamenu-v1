@@ -6,12 +6,23 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
     <title>megamenu</title>
 
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="styles/corev15.css" />
+    <link rel="stylesheet" href="styles/bootstrap3.min.css" />
+    <link rel="stylesheet" href="styles/bootstrap2-custom.min.css" />
+    <link rel="stylesheet" href="styles/sp-responsive.css" />
+    <link rel="stylesheet" href="styles/bootstrap3-custom.min.css" />
+    <link rel="stylesheet" href="styles/isotope-docs.css" />
+    <link rel="stylesheet" href="styles/advocate-custom.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body class="filtering-page" data-page="filtering">
-    <div class="container parentContainer">
+  <body
+    class="filtering-page"
+    data-page="filtering"
+    style="max-width:999px;margin:0 auto"
+  >
+    <div class="parentContainer">
       <div class="clearfix">
         <div class="col-md-9" id="dashboardtitle">
           <h1>
@@ -79,16 +90,35 @@
       </div>
       <div class="clearfix">
         <!-- <div class="button-group col-md-5 filters hide" id="measures"></div> -->
-        <div class="button-group col-md-7 filters" id="filters">
+        <div class="button-group col-md-9 filters" id="filters">
           <div class="btn-group-label">Filters:</div>
-          <button class="button is-checked all" data-filter="*">All</button>
-          <button class="button on-target-bkgd" data-filter=".ontarget">
+          <!-- <button class="button is-checked all" data-filter="*">All</button> -->
+          <button
+            type="button"
+            class="button max-target-bkgd"
+            data-filter=".maxtarget"
+          >
+            Max Target
+          </button>
+          <button
+            type="button"
+            class="button on-target-bkgd"
+            data-filter=".ontarget"
+          >
             On Target
           </button>
-          <button class="button under-target-bkgd" data-filter=".undertarget">
+          <button
+            type="button"
+            class="button under-target-bkgd"
+            data-filter=".undertarget"
+          >
             Under Target
           </button>
-          <button class="button off-target-bkgd" data-filter=".offtarget">
+          <button
+            type="button"
+            class="button off-target-bkgd"
+            data-filter=".offtarget"
+          >
             Off Target
           </button>
 
@@ -167,9 +197,9 @@
         </div>
 
         <div
-          class="element-item  undertarget kpi"
+          class="element-item  maxtarget kpi"
           onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=443&amp;ReportGroup=Close for Safety, Health Outcomes, Patient Experience';"
-          data-category="undertarget,kpi"
+          data-category="maxtarget,kpi"
         >
           <div class="tilename">Safety &amp; Health Outcomes Score</div>
           <div class="targetdiff">95</div>
@@ -259,9 +289,9 @@
         </div>
 
         <div
-          class="element-item  undertarget kpi"
+          class="element-item  maxtarget kpi"
           onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=247&amp;ReportGroup=Length of Stay';"
-          data-category="undertarget,kpi"
+          data-category="maxtarget,kpi"
         >
           <div class="tilename">Length of Stay Ratio</div>
           <div class="targetdiff">0.91</div>
@@ -375,259 +405,6 @@
 
         <div
           class="element-item  offtarget kpi"
-          onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=63&amp;ReportGroup=Infection Prevention';"
-          data-category="offtarget,kpi"
-        >
-          <div class="tilename">Hand Washing Compliance</div>
-          <div class="targetdiff">74%</div>
-          <div class="target">
-            <div class="targetstats">
-              <div class="targettitle">Target</div>
-              <div class="targetnumber">90%</div>
-            </div>
-          </div>
-          <div class="trend">
-            <div class="trendstats">
-              <div class="trendtitle">Trend</div>
-              <div class="targetbar downflat">
-                <img alt="" src="Images/spacer.png" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="element-item  undertarget kpi"
-          onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=443&amp;ReportGroup=Close for Safety, Health Outcomes, Patient Experience';"
-          data-category="undertarget,kpi"
-        >
-          <div class="tilename">Population Health Index</div>
-          <div class="targetdiff">95</div>
-          <div class="target">
-            <div class="targetstats">
-              <div class="targettitle">Target</div>
-              <div class="targetnumber">100</div>
-            </div>
-          </div>
-          <div class="trend">
-            <div class="trendstats">
-              <div class="trendtitle">Trend</div>
-              <div class="targetbar upup">
-                <img alt="" src="Images/spacer.png" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="element-item  undertarget kpi"
-          onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=443&amp;ReportGroup=Close for Safety, Health Outcomes, Patient Experience';"
-          data-category="undertarget,kpi"
-        >
-          <div class="tilename">Patient Experience Score</div>
-          <div class="targetdiff">84</div>
-          <div class="target">
-            <div class="targetstats">
-              <div class="targettitle">Target</div>
-              <div class="targetnumber">100</div>
-            </div>
-          </div>
-          <div class="trend">
-            <div class="trendstats">
-              <div class="trendtitle">Trend</div>
-              <div class="targetbar upup">
-                <img alt="" src="Images/spacer.png" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="element-item  undertarget kpi"
-          onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=167&amp;ReportGroup=Patient Experience - Service Reliability (CAHPS)';"
-          data-category="undertarget,kpi"
-        >
-          <div class="tilename">HCAHPS Service Reliability</div>
-          <div class="targetdiff">74.1%</div>
-          <div class="target">
-            <div class="targetstats">
-              <div class="targettitle">Target</div>
-              <div class="targetnumber">75.5%</div>
-            </div>
-          </div>
-          <div class="trend">
-            <div class="trendstats">
-              <div class="trendtitle">Trend</div>
-              <div class="targetbar upup">
-                <img alt="" src="Images/spacer.png" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="element-item  undertarget kpi"
-          onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=167&amp;ReportGroup=Patient Experience - Service Reliability (CAHPS)';"
-          data-category="undertarget,kpi"
-        >
-          <div class="tilename">Inpatient HCAHPS LTR</div>
-          <div class="targetdiff">76.4%</div>
-          <div class="target">
-            <div class="targetstats">
-              <div class="targettitle">Target</div>
-              <div class="targetnumber">79.0%</div>
-            </div>
-          </div>
-          <div class="trend">
-            <div class="trendstats">
-              <div class="trendtitle">Trend</div>
-              <div class="targetbar upup">
-                <img alt="" src="Images/spacer.png" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="element-item  undertarget kpi"
-          onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=283&amp;ReportGroup=Patient Experience - Satisfaction';"
-          data-category="undertarget,kpi"
-        >
-          <div class="tilename">ED Satisfaction</div>
-          <div class="targetdiff">88.3</div>
-          <div class="target">
-            <div class="targetstats">
-              <div class="targettitle">Target</div>
-              <div class="targetnumber">90.4</div>
-            </div>
-          </div>
-          <div class="trend">
-            <div class="trendstats">
-              <div class="trendtitle">Trend</div>
-              <div class="targetbar downdown">
-                <img alt="" src="Images/spacer.png" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="element-item  undertarget kpi"
-          onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=283&amp;ReportGroup=Patient Experience - Satisfaction';"
-          data-category="undertarget,kpi"
-        >
-          <div class="tilename">Emergency Department LTR</div>
-          <div class="targetdiff">86.5</div>
-          <div class="target">
-            <div class="targetstats">
-              <div class="targettitle">Target</div>
-              <div class="targetnumber">89.3</div>
-            </div>
-          </div>
-          <div class="trend">
-            <div class="trendstats">
-              <div class="trendtitle">Trend</div>
-              <div class="targetbar downdown">
-                <img alt="" src="Images/spacer.png" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="element-item  undertarget kpi"
-          onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=167&amp;ReportGroup=Patient Experience - Service Reliability (CAHPS)';"
-          data-category="undertarget,kpi"
-        >
-          <div class="tilename">Amb Surg OASCAHPS SR</div>
-          <div class="targetdiff">94.9%</div>
-          <div class="target">
-            <div class="targetstats">
-              <div class="targettitle">Target</div>
-              <div class="targetnumber">95.5%</div>
-            </div>
-          </div>
-          <div class="trend">
-            <div class="trendstats">
-              <div class="trendtitle">Trend</div>
-              <div class="targetbar flatflat">
-                <img alt="" src="Images/spacer.png" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="element-item  offtarget kpi"
-          onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=167&amp;ReportGroup=Patient Experience - Service Reliability (CAHPS)';"
-          data-category="offtarget,kpi"
-        >
-          <div class="tilename">Ambulatory Surgery OASCAHPS LTR</div>
-          <div class="targetdiff">83.9%</div>
-          <div class="target">
-            <div class="targetstats">
-              <div class="targettitle">Target</div>
-              <div class="targetnumber">88.2%</div>
-            </div>
-          </div>
-          <div class="trend">
-            <div class="trendstats">
-              <div class="trendtitle">Trend</div>
-              <div class="targetbar upup">
-                <img alt="" src="Images/spacer.png" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="element-item  undertarget kpi"
-          onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=283&amp;ReportGroup=Patient Experience - Satisfaction';"
-          data-category="undertarget,kpi"
-        >
-          <div class="tilename">Outpatient Satisfaction</div>
-          <div class="targetdiff">94.4</div>
-          <div class="target">
-            <div class="targetstats">
-              <div class="targettitle">Target</div>
-              <div class="targetnumber">94.6</div>
-            </div>
-          </div>
-          <div class="trend">
-            <div class="trendstats">
-              <div class="trendtitle">Trend</div>
-              <div class="targetbar flatflat">
-                <img alt="" src="Images/spacer.png" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="element-item  undertarget kpi"
-          onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=283&amp;ReportGroup=Patient Experience - Satisfaction';"
-          data-category="undertarget,kpi"
-        >
-          <div class="tilename">Outpatient LTR</div>
-          <div class="targetdiff">95.4</div>
-          <div class="target">
-            <div class="targetstats">
-              <div class="targettitle">Target</div>
-              <div class="targetnumber">95.7</div>
-            </div>
-          </div>
-          <div class="trend">
-            <div class="trendstats">
-              <div class="trendtitle">Trend</div>
-              <div class="targetbar flatflat">
-                <img alt="" src="Images/spacer.png" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="element-item  offtarget kpi"
           onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=442&amp;ReportGroup=Enterprise Population Health Cost and Utilization Index Drill-Down';"
           data-category="offtarget,kpi"
         >
@@ -678,8 +455,8 @@
     <script src="isotope.pkgd.min.js"></script>
     <script src="isotope-docs.min.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
-    <script src="Tiles.js"></script>
+    <!-- <script src="Tiles.js"></script> -->
     <script src="filtering.js"></script>
-    <script src="css_live_reload_init.js"></script>
+    <!-- <script src="css_live_reload_init.js"></script> -->
   </body>
 </html>

@@ -1,0 +1,40 @@
+﻿
+/* navigation menu */
+
+.navbar { height: 40px !important; }
+nav#navbar { margin-top: -12px; }
+#navbar { position: relative; }
+
+.navbar-inverse { background-color: #696A6C; border-color: #696A6C; border-top: 7px solid #dad9da; }
+
+#navbar { }
+#navbar > ul { list-style: none outside; padding: 0; margin: 0 auto; max-width: 1170px; position: relative; }
+#navbar > ul > li { display: inline-block; position: static; }
+#navbar > ul > li > a, #navbar > ul > li > a:visited { display: inline-block; padding: 1rem 2rem; color: white; text-decoration: none; }
+#navbar > ul > li:hover > a { background-color: #7e81be; }
+.navitem-megamenu { display: none; position: absolute; top: 100%; left: 0; right: 0; background-color: #7e81be; padding: 5px 0; }
+.navitem-megamenu,
+.navitem-megamenu * { box-sizing: border-box; }
+#navbar > ul > li.active .navitem-megamenu { display: block; }
+.navitem-megamenu-container { display: flex; }
+
+.megamenu-categories,
+.megamenu-items { max-height: calc(100vh - 186px); min-height: 99px; overflow: hidden; overflow-y: auto; }
+.megamenu-categories { padding-top: 5px; flex-shrink: 0; background-color: #7e81be; }
+.megamenu-category { color: white; font-size: 18px; line-height: 44px; padding: 0 2rem; white-space: nowrap; cursor: default; }
+.megamenu-category:hover,
+.megamenu-category.active { background-color: #e5e6f1; color: #7e81be; }
+.megamenu-category.active { font-weight: bold; }
+.megamenu-items { padding: 5px 1rem; flex-grow: 1; background-color: #e5e6f1; }
+.megamenu-columns { column-count: 4; column-width: 185px; }
+.megamenu-items-a { color: #000000; font-size: 16px; text-decoration: none; display: block; padding: 5px 0; }
+.megamenu-items-a:hover { color: #181f63; text-decoration: underline; }
+
+@media (max-width: 1023px) {
+  .navbar-collapse { padding-right: 0; padding-left: 0; }
+  .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form { border-color: transparent; max-width: 100%; margin: 0; }
+  .navbar-collapse { width: 100%; }
+  .navbar-collapse { max-height: 340px; padding-right: 0; padding-left: 0; overflow-x: visible; border-top: 1px solid transparent; box-shadow: none; -webkit-overflow-scrolling: touch; }
+  #navbar > ul > li { display: block; }
+
+}

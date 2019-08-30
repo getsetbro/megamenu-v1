@@ -1,34 +1,26 @@
 $(document).ready(function() {
-  $(".targetdiff").resizeText();
-  $(".targetnumber").resizeText();
+  // $(".targetdiff").resizeText();
+  // $(".targetnumber").resizeText();
   var $container = $(".isotope").isotope({
     itemSelector: ".element-item",
     layoutMode: "packery"
   });
-  $("#siteMeasures > .dropdown-menu > li > a").click(function() {
-    var filterValue = $(this).attr("data-filter");
-    $("#btnMeasureSelection").text($(this).text());
-    $container.isotope({ filter: filterValue });
-  });
-  $("#siteFilters > .dropdown-menu > li > a").click(function() {
-    var filterValue = $(this).attr("data-filter");
-    $("#btnSiteFilter").text($(this).text());
-    $container.isotope({ filter: filterValue });
-  });
-  $(".filters").on("click", "button", function() {
-    var filterValue = $(this).attr("data-filter");
-    $container.isotope({ filter: filterValue });
-  });
-  $("#sorts").on("click", "button", function() {
-    var sortByValue = $(this).attr("data-sort-by");
-    $container.isotope({ sortBy: sortByValue });
-  });
+
+  var filters = [];
   $(".button-group").each(function(i, buttonGroup) {
     var $buttonGroup = $(buttonGroup);
     $buttonGroup.on("click", "button", function(event) {
-      $buttonGroup.find(".is-checked").removeClass("is-checked");
-      $(this).addClass("is-checked");
-      event.preventDefault();
+      //$buttonGroup.find(".is-checked").removeClass("is-checked");
+      var $el = $(this);
+      if ($el.hasClass("is-checked")) {
+        $el.removeClass("is-checked");
+        filters.splice(filters.indexOf($el.attr("data-filter")), 1);
+      } else {
+        $el.addClass("is-checked");
+        filters.push($el.attr("data-filter"));
+      }
+
+      $container.isotope({ filter: filters.join() });
     });
   });
 });
