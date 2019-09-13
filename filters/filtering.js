@@ -1,8 +1,8 @@
 $(document).ready(function() {
   // $(".targetdiff").resizeText();
   // $(".targetnumber").resizeText();
-  var $container = $(".isotope").isotope({
-    itemSelector: ".element-item",
+  var $container = $(".isotope2").isotope({
+    itemSelector: ".iso2-item",
     layoutMode: "packery"
   });
 

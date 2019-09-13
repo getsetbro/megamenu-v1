@@ -260,7 +260,7 @@ var myData = [
   }
 ];
 
-function do_megamenu(global, document) {
+function do_megamenu(global, document, myMegamenu) {
   var el_mm_cats = document.getElementsByClassName("megamenu-categories")[0];
   var el_mm_items = document.getElementsByClassName("megamenu-items")[0];
   var megamenu_entries = Object.entries(myMegamenu);
@@ -317,11 +317,16 @@ function do_megamenu(global, document) {
     clearTimeout(category_timeout);
     swap_name = e.target.innerText;
     category_timeout = setTimeout(function() {
-      var elems = document.querySelectorAll(".megamenu-category.active");
+      var elems = document.querySelectorAll(
+        ".megamenu-category[name='active']"
+      );
       [].forEach.call(elems, function(el) {
-        el.classList.remove("active");
+        //el.classList.remove("active");
+        el.removeAttribute("name");
       });
-      e.target.classList.add("active");
+      //e.target.classList.add("active");
+      e.target.setAttribute("name", "active");
+
       el_mm_items.replaceChild(
         div_cols[swap_name].div_col,
         el_mm_items.firstChild
@@ -337,16 +342,17 @@ function do_megamenu(global, document) {
   var ni_replib = document.querySelectorAll(".report-library")[0];
   ni_replib.addEventListener("mouseenter", function(e) {
     clearTimeout(megamenu_timeout_out);
-
     megamenu_timeout_in = setTimeout(function() {
-      ni_replib.classList.add("active");
+      //ni_replib.classList.add("active");
+      ni_replib.setAttribute("name", "active");
     }, 444);
   });
 
   ni_replib.addEventListener("mouseleave", function(e) {
     clearTimeout(megamenu_timeout_in);
     megamenu_timeout_out = setTimeout(function() {
-      ni_replib.classList.remove("active");
+      //ni_replib.classList.remove("active");
+      ni_replib.removeAttribute("name");
     }, 555);
   });
 }
@@ -369,5 +375,5 @@ if (myData) {
       myMegamenu[cat.Title].push({ Title: link.Title, URL: link.URL });
     });
   });
-  do_megamenu(window, document);
+  do_megamenu(window, document, myMegamenu);
 }

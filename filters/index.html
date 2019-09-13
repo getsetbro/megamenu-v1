@@ -20,35 +20,123 @@
   <body
     class="filtering-page"
     data-page="filtering"
-    style="max-width:999px;margin:0 auto"
+    style="max-width:999px;margin:4rem auto; overflow: auto"
   >
     <div class="parentContainer">
       <div class="clearfix">
-        <div class="col-md-9" id="dashboardtitle">
-          <h1>
-            <span class="uppercase">
-              <span id="lblTitle">Measure Dashboard - July 2019</span>
-            </span>
-          </h1>
+        <div class="col-md-9" id="dashboardtitle2">
+          <span class="uppercase">
+            <span id="lblTitle">Measure Dashboard - July 2019</span>
+          </span>
         </div>
-        <div class="col-md-3" id="site">
+        <div class="col-md-3 text-right" id="site">
           <!-- Single button -->
-          <div class="btn-group" id="siteBtns">
-            <div class="btn-group-label">Site:</div>
-            <button class="btn btn-default" type="button">
+          <div class="btn-group text-left" id="siteBtns">
+            <span class="btn-group-label">Site:</span>
+            <button
+              type="button"
+              class="btn btn-default"
+              data-toggle="dropdown"
+            >
               <span id="lblSiteName">SYSTEM</span>
             </button>
             <button
-              class="btn btn-default dropdown-toggle"
-              aria-expanded="true"
-              aria-haspopup="true"
               type="button"
+              class="btn btn-default dropdown-toggle"
               data-toggle="dropdown"
             >
               <span class="caret"></span>
-              <span class="sr-only">Toggle Dropdown</span>
             </button>
-            <ul class="dropdown-menu" id="ddlSites">
+            <div class="dropdown-menu siteBtns_dropdownmenu-wrap">
+              <ul
+                class="nav nav-pills nav-justified siteBtns_dropdownmenu-tabs"
+              >
+                <li class="siteBtns_dropdownmenu-tabbtn active">
+                  <a href="#siteBtns_dropdownmenu-pane1" data-toggle="tab"
+                    >Region</a
+                  >
+                </li>
+                <li class="siteBtns_dropdownmenu-tabbtn">
+                  <a href="#siteBtns_dropdownmenu-pane2" data-toggle="tab"
+                    >PSA</a
+                  >
+                </li>
+                <li class="siteBtns_dropdownmenu-tabbtn">
+                  <a href="#siteBtns_dropdownmenu-pane3" data-toggle="tab"
+                    >Site</a
+                  >
+                </li>
+              </ul>
+              <div class="tab-content clearfix siteBtns_dropdownmenu-panes">
+                <div class="tab-pane active" id="siteBtns_dropdownmenu-pane1">
+                  <div class="siteBtns_dropdownmenu-search">
+                    <input
+                      type="text"
+                      class="siteBtns_dropdownmenu-input"
+                      placeholder="Search Regions"
+                    />
+                    <svg
+                      viewBox="0 0 10 10"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="10"
+                    >
+                      <circle cx="5" cy="5" r="5" fill="silver" />
+                    </svg>
+                  </div>
+                  <div class="siteBtns_dropdownmenu-list">
+                    <div class="siteBtns_dropdownmenu-listbtn">
+                      <a href="#CHIS1">First Region</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="siteBtns_dropdownmenu-pane2">
+                  <div class="siteBtns_dropdownmenu-search">
+                    <input
+                      type="text"
+                      class="siteBtns_dropdownmenu-input"
+                      placeholder="Search PSAs"
+                    />
+                    <svg
+                      viewBox="0 0 10 10"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="10"
+                    >
+                      <circle cx="5" cy="5" r="5" fill="silver" />
+                    </svg>
+                  </div>
+                  <div class="siteBtns_dropdownmenu-list">
+                    <div class="siteBtns_dropdownmenu-listbtn">
+                      <a href="#CHIS2">First PSA</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="siteBtns_dropdownmenu-pane3">
+                  <div class="siteBtns_dropdownmenu-search">
+                    <input
+                      type="text"
+                      class="siteBtns_dropdownmenu-input"
+                      placeholder="Search Sites"
+                    />
+                    <svg
+                      viewBox="0 0 10 10"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="10"
+                    >
+                      <circle cx="5" cy="5" r="5" fill="silver" />
+                    </svg>
+                  </div>
+                  <ul
+                    class="siteBtns_dropdownmenu-list"
+                    id="ddlSites"
+                    runat="server"
+                  ></ul>
+                </div>
+              </div>
+            </div>
+            <ul class="dropdown-menu-- hide" id="ddlSites">
               <li><a href="#CHIS/System">System</a></li>
               <li><a href="#CHIS/ACL">ACL</a></li>
               <li><a href="#CHIS/AMG">Advocate Med Grp</a></li>
@@ -88,47 +176,52 @@
           </div>
         </div>
       </div>
+      <br />
       <div class="clearfix">
-        <!-- <div class="button-group col-md-5 filters hide" id="measures"></div> -->
-        <div class="button-group col-md-9 filters" id="filters">
+        <div class="button-group col-md-5 filters" id="measures"></div>
+        <div class="button-group col-md-7 text-right filters" id="filters">
           <div class="btn-group-label">Filters:</div>
           <!-- <button class="button is-checked all" data-filter="*">All</button> -->
           <button
             type="button"
-            class="button max-target-bkgd"
+            class="btn-checkbox max-target-bkgd"
             data-filter=".maxtarget"
           >
-            Max Target
+            <span class="btn-checkbox_indicator"></span>
+            <span class="btn-checkbox_text">Max Target</span>
           </button>
           <button
             type="button"
-            class="button on-target-bkgd"
+            class="btn-checkbox on-target-bkgd"
             data-filter=".ontarget"
           >
-            On Target
+            <span class="btn-checkbox_indicator"></span>
+            <span class="btn-checkbox_text">On Target</span>
           </button>
           <button
             type="button"
-            class="button under-target-bkgd"
+            class="btn-checkbox under-target-bkgd"
             data-filter=".undertarget"
           >
-            Under Target
+            <span class="btn-checkbox_indicator"></span>
+            <span class="btn-checkbox_text">Under Target</span>
           </button>
           <button
             type="button"
-            class="button off-target-bkgd"
+            class="btn-checkbox off-target-bkgd"
             data-filter=".offtarget"
           >
-            Off Target
+            <span class="btn-checkbox_indicator"></span>
+            <span class="btn-checkbox_text">Off Target</span>
           </button>
 
           <!-- <div class="btn-group filters" id="siteFilters"></div> -->
         </div>
       </div>
-
-      <div class="isotope" style="height: 1680px; position: relative;">
+      <br />
+      <div class="isotope2" style="height: 1680px; position: relative;">
         <div
-          class="element-item  undertarget kpi"
+          class="iso2-item  undertarget kpi"
           onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=394&amp;ReportGroup=Safety Reporting';"
           data-category="undertarget,kpi"
         >
@@ -151,7 +244,7 @@
         </div>
 
         <div
-          class="element-item  ontarget kpi"
+          class="iso2-item  ontarget kpi"
           onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=394&amp;ReportGroup=Safety Reporting';"
           data-category="ontarget,kpi"
         >
@@ -174,7 +267,7 @@
         </div>
 
         <div
-          class="element-item  offtarget kpi"
+          class="iso2-item  offtarget kpi"
           onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=394&amp;ReportGroup=Safety Reporting';"
           data-category="offtarget,kpi"
         >
@@ -197,7 +290,7 @@
         </div>
 
         <div
-          class="element-item  maxtarget kpi"
+          class="iso2-item  maxtarget kpi"
           onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=443&amp;ReportGroup=Close for Safety, Health Outcomes, Patient Experience';"
           data-category="maxtarget,kpi"
         >
@@ -220,7 +313,7 @@
         </div>
 
         <div
-          class="element-item  offtarget kpi"
+          class="iso2-item  offtarget kpi"
           onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=13&amp;ReportGroup=Complications';"
           data-category="offtarget,kpi"
         >
@@ -243,7 +336,7 @@
         </div>
 
         <div
-          class="element-item  undertarget kpi"
+          class="iso2-item  undertarget kpi"
           onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=105&amp;ReportGroup=Mortality';"
           data-category="undertarget,kpi"
         >
@@ -266,7 +359,7 @@
         </div>
 
         <div
-          class="element-item  ontarget kpi"
+          class="iso2-item  ontarget kpi"
           onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=316&amp;ReportGroup=Culture of Safety Survey';"
           data-category="ontarget,kpi"
         >
@@ -289,7 +382,7 @@
         </div>
 
         <div
-          class="element-item  maxtarget kpi"
+          class="iso2-item  maxtarget kpi"
           onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=247&amp;ReportGroup=Length of Stay';"
           data-category="maxtarget,kpi"
         >
@@ -312,7 +405,7 @@
         </div>
 
         <div
-          class="element-item  ontarget kpi"
+          class="iso2-item  ontarget kpi"
           onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=449&amp;ReportGroup=Core Measures';"
           data-category="ontarget,kpi"
         >
@@ -335,7 +428,7 @@
         </div>
 
         <div
-          class="element-item  ontarget kpi"
+          class="iso2-item  ontarget kpi"
           onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=449&amp;ReportGroup=Core Measures';"
           data-category="ontarget,kpi"
         >
@@ -358,7 +451,7 @@
         </div>
 
         <div
-          class="element-item  ontarget kpi"
+          class="iso2-item  ontarget kpi"
           onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=449&amp;ReportGroup=Core Measures';"
           data-category="ontarget,kpi"
         >
@@ -381,7 +474,7 @@
         </div>
 
         <div
-          class="element-item  undertarget kpi"
+          class="iso2-item  undertarget kpi"
           onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=63&amp;ReportGroup=Infection Prevention';"
           data-category="undertarget,kpi"
         >
@@ -404,7 +497,7 @@
         </div>
 
         <div
-          class="element-item  offtarget kpi"
+          class="iso2-item  offtarget kpi"
           onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=442&amp;ReportGroup=Enterprise Population Health Cost and Utilization Index Drill-Down';"
           data-category="offtarget,kpi"
         >
@@ -427,7 +520,7 @@
         </div>
 
         <div
-          class="element-item  offtarget kpi"
+          class="iso2-item  offtarget kpi"
           onclick="window.location.href='#CHIS/SYSTEM/Pages/reportviewer.aspx?ReportID=360&amp;ReportGroup=APP Accountable Care Index Drill-Down';"
           data-category="offtarget,kpi"
         >
@@ -454,7 +547,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="isotope.pkgd.min.js"></script>
     <script src="isotope-docs.min.js"></script>
-    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./bootstrap/bootstrap.min.js"></script>
     <!-- <script src="Tiles.js"></script> -->
     <script src="filtering.js"></script>
     <!-- <script src="css_live_reload_init.js"></script> -->

@@ -1,0 +1,467 @@
+#dashboardtitle2 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 32px;
+  color: #11175e;
+  line-height: 1;
+}
+
+#siteBtns {
+}
+
+#siteBtns * {
+  box-sizing: border-box;
+}
+
+#siteBtns .btn-group-label {
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-size: 14px;
+  float: none;
+  margin-right: 5px;
+}
+
+#siteBtns > button {
+  padding: 0;
+  background-color: white;
+  border: 0 none;
+  border-radius: 0;
+  background-image: none;
+  text-shadow: none;
+  color: #343434;
+  cursor: pointer;
+  min-width: 0;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  float: none;
+}
+#siteBtns > button:focus,
+#siteBtns > button:active {
+  box-shadow: none;
+}
+#siteBtns > button.btn.btn-default.dropdown-toggle {
+  border-radius: 0 !important;
+  min-width: 1em !important;
+  border: 0 none;
+  display: inline-block;
+  vertical-align: 0;
+  line-height: 1;
+  margin-left: 2px;
+}
+#siteBtns.open > button.btn.btn-default.dropdown-toggle {
+  box-shadow: none;
+}
+#siteBtns.open > button.btn.btn-default.dropdown-toggle .caret {
+  transform: rotate(180deg);
+}
+#siteBtns > ul.dropdown-menu {
+  background-color: #dbdbdb;
+  left: auto;
+  right: 0;
+  text-align: left;
+}
+
+.siteBtns_dropdownmenu-wrap {
+  left: auto;
+  right: 0;
+  min-width: 450px;
+  max-width: 100%;
+  float: none;
+  border: 1px solid #979797;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.28);
+  padding-top: 0;
+  border-radius: 0;
+  display: block;
+  font-family: "PT Sans";
+}
+.siteBtns_dropdownmenu-tabs {
+  background-color: #005278;
+  border: 2px solid #005278;
+  margin: -1px -1px 0 -1px;
+  padding: 5px;
+}
+.siteBtns_dropdownmenu-tabbtn a {
+  border-radius: 5px;
+  background-color: #005278;
+  border-color: #005278;
+
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 26px;
+}
+.nav > li.siteBtns_dropdownmenu-tabbtn > a:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-color: #005278;
+
+  color: #005278;
+}
+.nav-pills > li.siteBtns_dropdownmenu-tabbtn.active > a {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #005278;
+  font-weight: bold;
+}
+.siteBtns_dropdownmenu-search {
+  padding: 1rem;
+  position: relative;
+}
+.siteBtns_dropdownmenu-search input {
+  width: 100%;
+  border-width: 0 0 2px 0;
+  border-color: #7e81be;
+}
+.siteBtns_dropdownmenu-search svg {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.siteBtns_dropdownmenu-list {
+  max-height: 350px;
+  overflow: auto;
+}
+.siteBtns_dropdownmenu-listbtn {
+  color: #212529;
+  font-size: 16px;
+  line-height: 23px;
+}
+.siteBtns_dropdownmenu-listbtn:hover {
+  background-color: #bfc0df;
+}
+
+/* #siteFilters > button:nth-child(2) {border-radius: 0.4em 0 0 0.4em !important;} */
+/* #siteFilters .dropdown-menu {left: -100px;} */
+
+/* #measures.button-group .button.watchlist { */
+/* border-radius: 0 0.4em 0.4em 0; */
+/* } */
+/* #measures.button-group .button:first-child { */
+/* border-radius: 0.4em 0 0 0.4em; */
+/* } */
+
+/* Over riding iso-type tile styles */
+/* #measures, */
+
+#filters .btn-group-label {
+  margin: 0;
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+/* #measures .button {} */
+.btn-checkbox {
+  display: inline-block;
+  background-image: none;
+  background-color: #f4f4fd;
+  border: 0 solid #f4f4fd;
+  border-width: 0 0 5px 0;
+  border-bottom-width: 5px;
+  padding: 4px 6px 4px;
+  border-radius: 0;
+  text-shadow: none;
+  color: #11175e;
+  cursor: pointer;
+  margin-right: 5px;
+  box-sizing: border-box;
+  position: relative;
+}
+.btn-checkbox:hover {
+  background-color: #f4f4fd;
+}
+.btn-checkbox:active {
+  background-color: #fff;
+}
+.btn-checkbox .btn-checkbox_indicator {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  border: 1px solid #9797a7;
+  box-sizing: border-box;
+}
+
+.btn-checkbox .btn-checkbox_indicator:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 0px;
+  width: 8px;
+  height: 15px;
+  border: solid #7e81be;
+  border-width: 0 2px 2px 0;
+  transform: rotate(40deg);
+}
+.btn-checkbox.is-checked .btn-checkbox_indicator:after {
+  display: inline-block;
+}
+.btn-checkbox .btn-checkbox_text {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* #filters .btn-checkbox.all {min-width: 2em !important;} */
+#filters .btn-checkbox.max-target-bkgd {
+  border-color: #0091ff;
+}
+#filters .btn-checkbox.on-target-bkgd {
+  border-color: #6dd400;
+}
+#filters .btn-checkbox.under-target-bkgd {
+  border-color: #f7b500;
+}
+#filters .btn-checkbox.off-target-bkgd {
+  border-color: #e02020;
+}
+#filters .btn-checkbox.is-checked {
+  border-width: 1px 1px 5px 1px;
+  padding: 3px 5px 4px;
+}
+
+.iso2-item {
+  position: relative;
+  float: left;
+  width: 230px;
+  height: 220px;
+  margin: 5px;
+  padding: 5px;
+  background: #888;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.iso2-item:hover {
+  cursor: pointer;
+}
+
+/* tile colors */
+.iso2-item.offtarget {
+  background: #be001f;
+}
+.iso2-item.undertarget {
+  background: #f1c40f;
+}
+.iso2-item.ontarget {
+  background: #2ecc71;
+}
+.iso2-item.maxtarget {
+  background: #0091ff;
+}
+.iso2-item .tilename {
+  position: relative;
+  color: #fff;
+  top: 0;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+  height: 1px;
+  padding: 0 8px;
+}
+.iso2-item .targetdiff {
+  position: relative;
+  left: 0;
+  top: 49px;
+  font-size: 45px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 75px;
+}
+.iso2-item .trend {
+  position: absolute;
+  bottom: 0;
+  height: 75px;
+  width: 50%;
+  background-color: #aeb6b1;
+  text-align: center;
+  display: table;
+  left: 50%;
+}
+.iso2-item .target {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 75px;
+  width: 50%;
+  background-color: #8b9790;
+  text-align: center;
+  display: table;
+}
+.iso2-item .targetstats,
+.iso2-item .trendstats {
+  vertical-align: top;
+  display: table-cell;
+}
+.iso2-item .targettitle,
+.iso2-item .trendtitle {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.iso2-item .trendtitle {
+  margin-bottom: 9px;
+}
+.iso2-item .targetnumber {
+  font-weight: bold;
+  font-size: 30px;
+  padding: 0px 0 0 0;
+  position: relative;
+  top: 2px;
+  width: 110px;
+  height: 56px;
+}
+.iso2-item .targetbar.upup {
+  background: url("Images/trend-up-up.png") no-repeat center 0;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+.iso2-item .targetbar.updown {
+  background: url("Images/trend-up-down.png") no-repeat center 0;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+.iso2-item .targetbar.upflat {
+  background: url("Images/trend-up-flat.png") no-repeat center 0;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+.iso2-item .targetbar.downdown {
+  background: url("Images/trend-down-down.png") no-repeat center 0;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+.iso2-item .targetbar.downflat {
+  background: url("Images/trend-down-flat.png") no-repeat center 0;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+.iso2-item .targetbar.downup {
+  background: url("Images/trend-down-up.png") no-repeat center 0;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+.iso2-item .targetbar.flatflat {
+  background: url("Images/trend-flat-flat.png") no-repeat center 0;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+.iso2-item .targetbar.flatup {
+  background: url("Images/trend-flat-up.png") no-repeat center 0;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+.iso2-item .targetbar.flatdown {
+  background: url("Images/trend-flat-down.png") no-repeat center 0;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+.iso2-item .targetbar.na {
+  background: url("Images/trend-na.png") no-repeat center 6px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+.iso2-item .targetbar {
+  height: 42px;
+  margin-bottom: 5px;
+}
+.iso2-item .targetbar img {
+  width: 86px;
+  height: 47px;
+}
+
+/* ipad landscape and wider */
+@media (min-width: 1024px) {
+  /* #siteMeasures.btn-group,
+  #filters #siteFilters.btn-group {
+    display: none !important;
+  } */
+  /* end media query for 1024px */
+}
+
+/* ipad portrait and lower mobile devices */
+@media (max-width: 1023px) {
+  /* #siteFilters input[type="button"],
+  #siteFilters input[type="reset"],
+  #siteFilters input[type="submit"],
+  #siteFilters button {
+    min-width: 1em;
+  } */
+
+  /* #measures #site.btn-group, */
+  /* #filters #site.btn-group {display: inline-block;} */
+  /* #measures button.button, */
+  /* #filters button.button {display: none;} */
+  /* #measures, */
+  #site {
+    margin: 10px 0;
+  }
+
+  /* #measures.col-md-5, */
+  #filters.col-md-7 {
+    width: 100%;
+    text-align: left;
+  }
+
+  .isotope2 {
+    margin: 0 auto;
+    display: table;
+    width: 660px;
+  }
+  /* .reportGroupFilters,
+  #siteFilters .dropdown-menu {
+    left: 0px !important;
+    background-color: #f3f2f8 !important;
+  } */
+  /* #siteBtns.btn-group {float: left;} */
+
+  /* end media query for 1023px */
+}
+
+@media (max-width: 659px) {
+  .isotope2 {
+    margin: 0 30px;
+    display: table;
+    width: 100%;
+  }
+  /* end media query for 659px */
+}
+
+/* iPhone 5 and lower mobile devices */
+@media (max-width: 360px) {
+  /* eliminates the horizontal scroll */
+  .iso2-item {
+    margin: 0 0 30px 0;
+  }
+  .isotope2 {
+    margin: 0;
+  }
+  /* end media query for 360px */
+}
