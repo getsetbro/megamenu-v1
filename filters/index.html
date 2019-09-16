@@ -32,13 +32,13 @@
         <div class="col-md-3 text-right" id="site">
           <!-- Single button -->
           <div class="btn-group text-left" id="siteBtns">
-            <span class="btn-group-label">Site:</span>
+            <!-- <span class="btn-group-label">Site:</span> -->
             <button
               type="button"
               class="btn btn-default"
               data-toggle="dropdown"
             >
-              <span id="lblSiteName">SYSTEM</span>
+              <span id="lblSiteName">PSA: System</span>
             </button>
             <button
               type="button"
@@ -50,129 +50,183 @@
             <div class="dropdown-menu siteBtns_dropdownmenu-wrap">
               <ul
                 class="nav nav-pills nav-justified siteBtns_dropdownmenu-tabs"
+                onClick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;"
               >
                 <li class="siteBtns_dropdownmenu-tabbtn active">
-                  <a href="#siteBtns_dropdownmenu-pane1" data-toggle="tab"
+                  <a href="#siteBtns_dropdownmenu-pane1" data-toglr="tab"
                     >Region</a
                   >
                 </li>
                 <li class="siteBtns_dropdownmenu-tabbtn">
-                  <a href="#siteBtns_dropdownmenu-pane2" data-toggle="tab"
+                  <a href="#siteBtns_dropdownmenu-pane2" data-toglr="tab"
                     >PSA</a
                   >
                 </li>
                 <li class="siteBtns_dropdownmenu-tabbtn">
-                  <a href="#siteBtns_dropdownmenu-pane3" data-toggle="tab"
+                  <a href="#siteBtns_dropdownmenu-pane3" data-toglr="tab"
                     >Site</a
                   >
                 </li>
               </ul>
               <div class="tab-content clearfix siteBtns_dropdownmenu-panes">
                 <div class="tab-pane active" id="siteBtns_dropdownmenu-pane1">
-                  <div class="siteBtns_dropdownmenu-search">
+                  <div
+                    class="siteBtns_dropdownmenu-search"
+                    onClick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;"
+                  >
                     <input
                       type="text"
                       class="siteBtns_dropdownmenu-input"
                       placeholder="Search Regions"
+                      id="myInput1"
                     />
                     <svg
-                      viewBox="0 0 10 10"
+                      viewBox="0 0 100 125"
                       xmlns="http://www.w3.org/2000/svg"
-                      width="10"
-                      height="10"
+                      width="18"
+                      height="18"
                     >
-                      <circle cx="5" cy="5" r="5" fill="silver" />
+                      <path
+                        fill="currentColor"
+                        d="M96 89L74 67a40 40 0 1 0-7 7l22 22c2 2 5 2 7 0s2-5 0-7zM21 64a30 30 0 1 1 43-43 30 30 0 0 1-43 43z"
+                      />
                     </svg>
                   </div>
-                  <div class="siteBtns_dropdownmenu-list">
-                    <div class="siteBtns_dropdownmenu-listbtn">
-                      <a href="#CHIS1">First Region</a>
-                    </div>
-                  </div>
+                  <ul
+                    class="list-unstyled siteBtns_dropdownmenu-list dd-menu-1"
+                  >
+                    <li><a href="#CHIS/System">System</a></li>
+                    <li><a href="#CHIS/ACL">ACL</a></li>
+                    <li><a href="#CHIS/AHCMG">Aurora HC Med Grp</a></li>
+                    <li><a href="#CHIS/BAMC">Bay Area</a></li>
+                    <li><a href="#CHIS/ABMC">BayCare</a></li>
+                    <li><a href="#CHIs/ACH">Children's</a></li>
+                    <li><a href="#CHIS/CMC">Christ</a></li>
+                    <li><a href="#CHIS/ECH">Eureka</a></li>
+                    <li><a href="#CHIS/GSAM">Good Samaritan</a></li>
+                    <li><a href="#CHIS/AMCG">Grafton</a></li>
+                    <li><a href="#CHIS/IMMC">Illinois Masonic</a></li>
+                    <li><a href="#CHIS/AMCK">Kenosha</a></li>
+                    <li><a href="#CHIS/ALMC">Lakeland</a></li>
+                    <li><a href="#CHIS/LGH">Lutheran</a></li>
+                    <li><a href="#CHIS/AMCMC">Manitowoc Co</a></li>
+                    <li><a href="#CHIS/AMCO">Oshkosh</a></li>
+                    <li><a href="#CHIS/HHC">Post Acute</a></li>
+                    <li><a href="#CHIS/APH">Psych</a></li>
+                    <li><a href="#CHIS/SSH">South Suburban</a></li>
+                    <li><a href="#CHIS/ASLMC">St Luke's</a></li>
+                    <li><a href="#CHIS/AMCS">Summit</a></li>
+                    <li><a href="#CHIS/TRN">Trinity</a></li>
+                    <li><a href="#CHIS/AMCWC">Washington Co</a></li>
+                  </ul>
                 </div>
                 <div class="tab-pane" id="siteBtns_dropdownmenu-pane2">
-                  <div class="siteBtns_dropdownmenu-search">
+                  <div
+                    class="siteBtns_dropdownmenu-search"
+                    onClick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;"
+                  >
                     <input
                       type="text"
                       class="siteBtns_dropdownmenu-input"
                       placeholder="Search PSAs"
+                      id="myInput2"
                     />
                     <svg
-                      viewBox="0 0 10 10"
+                      viewBox="0 0 100 125"
                       xmlns="http://www.w3.org/2000/svg"
-                      width="10"
-                      height="10"
+                      width="18"
+                      height="18"
                     >
-                      <circle cx="5" cy="5" r="5" fill="silver" />
+                      <path
+                        fill="currentColor"
+                        d="M96 89L74 67a40 40 0 1 0-7 7l22 22c2 2 5 2 7 0s2-5 0-7zM21 64a30 30 0 1 1 43-43 30 30 0 0 1-43 43z"
+                      />
                     </svg>
                   </div>
-                  <div class="siteBtns_dropdownmenu-list">
-                    <div class="siteBtns_dropdownmenu-listbtn">
-                      <a href="#CHIS2">First PSA</a>
-                    </div>
-                  </div>
+                  <ul
+                    class="list-unstyled siteBtns_dropdownmenu-list dd-menu-2"
+                  >
+                    <li><a href="#CHIS/System">System</a></li>
+                    <li><a href="#CHIS/ACL">ACL</a></li>
+                    <li><a href="#CHIS/AHCMG">Aurora HC Med Grp</a></li>
+                    <li><a href="#CHIS/BAMC">Bay Area</a></li>
+                    <li><a href="#CHIS/ABMC">BayCare</a></li>
+                    <li><a href="#CHIs/ACH">Children's</a></li>
+                    <li><a href="#CHIS/CMC">Christ</a></li>
+                    <li><a href="#CHIS/ECH">Eureka</a></li>
+                    <li><a href="#CHIS/GSAM">Good Samaritan</a></li>
+                    <li><a href="#CHIS/AMCG">Grafton</a></li>
+                    <li><a href="#CHIS/IMMC">Illinois Masonic</a></li>
+                    <li><a href="#CHIS/AMCK">Kenosha</a></li>
+                    <li><a href="#CHIS/ALMC">Lakeland</a></li>
+                    <li><a href="#CHIS/LGH">Lutheran</a></li>
+                    <li><a href="#CHIS/AMCMC">Manitowoc Co</a></li>
+                    <li><a href="#CHIS/AMCO">Oshkosh</a></li>
+                    <li><a href="#CHIS/HHC">Post Acute</a></li>
+                    <li><a href="#CHIS/APH">Psych</a></li>
+                    <li><a href="#CHIS/SSH">South Suburban</a></li>
+                    <li><a href="#CHIS/ASLMC">St Luke's</a></li>
+                    <li><a href="#CHIS/AMCS">Summit</a></li>
+                    <li><a href="#CHIS/TRN">Trinity</a></li>
+                    <li><a href="#CHIS/AMCWC">Washington Co</a></li>
+                  </ul>
                 </div>
                 <div class="tab-pane" id="siteBtns_dropdownmenu-pane3">
-                  <div class="siteBtns_dropdownmenu-search">
+                  <div
+                    class="siteBtns_dropdownmenu-search"
+                    onClick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;"
+                  >
                     <input
                       type="text"
                       class="siteBtns_dropdownmenu-input"
                       placeholder="Search Sites"
+                      id="myInput3"
                     />
                     <svg
-                      viewBox="0 0 10 10"
+                      viewBox="0 0 100 125"
                       xmlns="http://www.w3.org/2000/svg"
-                      width="10"
-                      height="10"
+                      width="18"
+                      height="18"
                     >
-                      <circle cx="5" cy="5" r="5" fill="silver" />
+                      <path
+                        fill="currentColor"
+                        d="M96 89L74 67a40 40 0 1 0-7 7l22 22c2 2 5 2 7 0s2-5 0-7zM21 64a30 30 0 1 1 43-43 30 30 0 0 1-43 43z"
+                      />
                     </svg>
                   </div>
                   <ul
-                    class="siteBtns_dropdownmenu-list"
+                    class="list-unstyled siteBtns_dropdownmenu-list dd-menu-3"
                     id="ddlSites"
                     runat="server"
-                  ></ul>
+                  >
+                    <li><a href="#CHIS/System">System</a></li>
+                    <li><a href="#CHIS/ACL">ACL</a></li>
+                    <li><a href="#CHIS/AHCMG">Aurora HC Med Grp</a></li>
+                    <li><a href="#CHIS/BAMC">Bay Area</a></li>
+                    <li><a href="#CHIS/ABMC">BayCare</a></li>
+                    <li><a href="#CHIs/ACH">Children's</a></li>
+                    <li><a href="#CHIS/CMC">Christ</a></li>
+                    <li><a href="#CHIS/ECH">Eureka</a></li>
+                    <li><a href="#CHIS/GSAM">Good Samaritan</a></li>
+                    <li><a href="#CHIS/AMCG">Grafton</a></li>
+                    <li><a href="#CHIS/IMMC">Illinois Masonic</a></li>
+                    <li><a href="#CHIS/AMCK">Kenosha</a></li>
+                    <li><a href="#CHIS/ALMC">Lakeland</a></li>
+                    <li><a href="#CHIS/LGH">Lutheran</a></li>
+                    <li><a href="#CHIS/AMCMC">Manitowoc Co</a></li>
+                    <li><a href="#CHIS/AMCO">Oshkosh</a></li>
+                    <li><a href="#CHIS/HHC">Post Acute</a></li>
+                    <li><a href="#CHIS/APH">Psych</a></li>
+                    <li><a href="#CHIS/SSH">South Suburban</a></li>
+                    <li><a href="#CHIS/ASLMC">St Luke's</a></li>
+                    <li><a href="#CHIS/AMCS">Summit</a></li>
+                    <li><a href="#CHIS/TRN">Trinity</a></li>
+                    <li><a href="#CHIS/AMCWC">Washington Co</a></li>
+                  </ul>
                 </div>
               </div>
             </div>
-            <ul class="dropdown-menu-- hide" id="ddlSites">
-              <li><a href="#CHIS/System">System</a></li>
-              <li><a href="#CHIS/ACL">ACL</a></li>
-              <li><a href="#CHIS/AMG">Advocate Med Grp</a></li>
-              <li><a href="#CHIS/APP">Advocate Physician Partners</a></li>
-              <li><a href="#CHIS/AHCMG">Aurora HC Med Grp</a></li>
-              <li><a href="#CHIS/BAMC">Bay Area</a></li>
-              <li><a href="#CHIS/ABMC">BayCare</a></li>
-              <li><a href="#CHIS/BMC">BroMenn</a></li>
-              <li><a href="#CHIS/AMCB">Burlington</a></li>
-              <li><a href="#CHIs/ACH">Children's</a></li>
-              <li><a href="#CHIS/CMC">Christ</a></li>
-              <li><a href="#CHIS/COND">Condell</a></li>
-              <li><a href="#CHIS/ECH">Eureka</a></li>
-              <li><a href="#CHIS/GSAM">Good Samaritan</a></li>
-              <li><a href="#CHIS/GSHP">Good Shepherd</a></li>
-              <li><a href="#CHIS/AMCG">Grafton</a></li>
-              <li><a href="#CHIS/IMMC">Illinois Masonic</a></li>
-              <li><a href="#CHIS/AMCK">Kenosha</a></li>
-              <li><a href="#CHIS/ALMC">Lakeland</a></li>
-              <li><a href="#CHIS/LGH">Lutheran</a></li>
-              <li><a href="#CHIS/AMCMC">Manitowoc Co</a></li>
-              <li><a href="#CHIS/AMCO">Oshkosh</a></li>
-              <li><a href="#CHIS/Pharmacy">Pharmacy</a></li>
-              <li><a href="#CHIS/HHC">Post Acute</a></li>
-              <li><a href="#CHIS/APH">Psych</a></li>
-              <li><a href="#CHIS/ASMMC">Sheboygan</a></li>
-              <li><a href="#CHIS/SHER">Sherman</a></li>
-              <li><a href="#CHIS/ASMC">Sinai</a></li>
-              <li><a href="#CHIS/ASLSS">South Shore</a></li>
-              <li><a href="#CHIS/SSH">South Suburban</a></li>
-              <li><a href="#CHIS/ASLMC">St Luke's</a></li>
-              <li><a href="#CHIS/AMCS">Summit</a></li>
-              <li><a href="#CHIS/TRN">Trinity</a></li>
-              <li><a href="#CHIS/AMCWC">Washington Co</a></li>
-              <li><a href="#CHIS/AWAMC">West Allis</a></li>
-            </ul>
+            <!-- <ul class="dropdown-menu" id="ddlSites"></ul> -->
           </div>
         </div>
       </div>
@@ -549,6 +603,7 @@
     <script src="isotope-docs.min.js"></script>
     <script src="./bootstrap/bootstrap.min.js"></script>
     <!-- <script src="Tiles.js"></script> -->
+
     <script src="filtering.js"></script>
     <!-- <script src="css_live_reload_init.js"></script> -->
   </body>

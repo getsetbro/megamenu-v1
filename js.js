@@ -269,17 +269,17 @@ function do_megamenu(global, document, myMegamenu) {
   var megamenu_timeout_out;
   var div_cols = {};
   var swap_name;
-
-  // var viewall = document.createElement("A"); // Create a <a> element
-  // viewall.innerText = "View All"; // Insert text
-  // viewall.className = "megamenu-items-a";
-  // viewall.setAttribute("href", "/view_all.aspx");
+  var first_one = true;
 
   var new_div_cat = function(name) {
     var el_d = document.createElement("DIV"); // Create a <div> element
     el_d.addEventListener("mouseover", mm_mouseIn, false);
     el_d.addEventListener("mouseout", mm_mouseExit, false);
     el_d.className = "megamenu-category";
+    if (first_one) {
+      el_d.setAttribute("name", "first");
+      first_one = false;
+    }
     el_d.innerText = name; // Insert text
     return el_d;
   };
@@ -306,9 +306,14 @@ function do_megamenu(global, document, myMegamenu) {
       //add links
       div_cols[name].div_col.appendChild(new_a_link(link));
     });
-
-    //div_cols[name].div_col.appendChild(viewall.cloneNode(true)); // append viewall
   });
+
+  var el_first_cat = document.querySelectorAll(
+    ".megamenu-category[name='first']"
+  )[0];
+  var event_trigger = document.createEvent("HTMLEvents");
+  event_trigger.initEvent("mouseover", true, false);
+  el_first_cat.dispatchEvent(event_trigger);
 
   function mm_mouseIn(e) {
     if (swap_name === e.target.innerText) {
@@ -321,15 +326,13 @@ function do_megamenu(global, document, myMegamenu) {
         ".megamenu-category[name='active']"
       );
       [].forEach.call(elems, function(el) {
-        //el.classList.remove("active");
         el.removeAttribute("name");
       });
-      //e.target.classList.add("active");
       e.target.setAttribute("name", "active");
 
       el_mm_items.replaceChild(
         div_cols[swap_name].div_col,
-        el_mm_items.firstChild
+        el_mm_items.firstElementChild
       );
     }, 444);
   }
