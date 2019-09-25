@@ -142,7 +142,7 @@ div#MainRow {
   left: -15px;
 }
 .navbar-collapse.collapse {
-  /* float: left; */
+  float: left;
   width: 100%;
 }
 .navbar-inverse {
@@ -314,6 +314,13 @@ div#MainRow {
   box-shadow: #8b9790;
 }
 
+#measures.button-group .button.watchlist {
+  border-radius: 0 0.4em 0.4em 0;
+}
+#measures.button-group .button:first-child {
+  border-radius: 0.4em 0 0 0.4em;
+}
+
 .btn-group-label {
   float: left;
   margin: 12px 7px 0 25px;
@@ -347,7 +354,7 @@ h1 {
   margin-top: 7px;
 }
 .masthead.fixed .advocate-logo.pull-left img {
-  width: 100px;
+  width: 245px;
   position: relative;
   top: 15px;
   padding-right: 10px;
@@ -519,7 +526,6 @@ h1 {
   }
   /* end media query for 360px */
 }
-
 /* Public Data */
 
 #dashboardtitle h2 {
@@ -686,7 +692,6 @@ li.listItem {
 }
 .listTitle {
   font-size: 16px;
-
   color: #000;
 }
 
