@@ -1,4 +1,3 @@
-
 #filters .btn-group-label {
   margin: 0;
   float: none;
@@ -62,7 +61,7 @@
   border-color: #0091ff;
 }
 #filters .btn-checkbox.on-target-bkgd {
-  border-color: #6dd400;
+  border-color: #2ecc71;
 }
 #filters .btn-checkbox.under-target-bkgd {
   border-color: #f7b500;
